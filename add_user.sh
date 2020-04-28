@@ -31,13 +31,6 @@ EOF
   exit 1
 fi
 
-if ! grep -qs "hwdsl2 VPN script" /etc/sysctl.conf; then
-cat 1>&2 <<'EOF'
-Error: This script can only be used with VPN servers created using:
-       https://github.com/hwdsl2/setup-ipsec-vpn
-EOF
-  exit 1
-fi
 
 VPN_USER=$1
 VPN_PASSWORD=$2
